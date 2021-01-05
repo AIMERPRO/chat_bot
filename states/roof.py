@@ -19,5 +19,23 @@ class Roof(StatesGroup):
     leaks = State()  # протечки
     state_of_mauerlat = State()  # состояние мауэрлата
     outer_wall_thickness = State()  # толщина наружной стены
-    firewall = State()  # брандмауэр
-    
+    outdoor_temperature = State()  # температура наружного воздуха
+    attic_temperature = State()  # температура чердака
+    the_rotten_rafters = State()  # отметить гнилые стропила
+    roof_width = State()  # ширина кровли
+    roof_length = State()  # длина кровли
+    weather_vane = State()  # флюгарки
+    condition_of_the_top = State() # состояние верхней поверхности оцинковки
+    condition_of_brick = State()  # состояние кирпичных или других вентшахт
+    superstructures_on_the_roof = State()  # есть ли надстройки на кровле
+    communications_the_attic = State()  # какие коммуникации идут по чердаку
+
+
+
+class MineInsulation(StatesGroup):  # утепление шахт
+    pass
+
+
+
+class FireFall(StatesGroup):  # брандмауэр
+    pass
