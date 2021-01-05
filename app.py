@@ -1,4 +1,5 @@
 async def on_startup(dp):
+
     import filters
     import middlewares
     filters.setup(dp)
