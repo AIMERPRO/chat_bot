@@ -2,40 +2,58 @@ from aiogram.dispatcher.filters.state import StatesGroup, State
 
 
 class Roof(StatesGroup):
-    appearance = State()  # Внешний вид
-    on_the_roof = State()  # Выход на кровлю
-    on_the_attic = State()  # выход на чердак
-    step_rafters = State()  # шаг стропил
-    size_and_pitch_crate = State()  # размер и шаг обрешетки
-    number_of_outputs = State()  # количество выходов
-    presence_of_insulation = State()  # наличие утеплителя и толщина
-    galvanized_thickness = State()  # толщина оцинковки
-    rafter_scheme = State()  # схема стропил
-    ridge_height = State()  # высота в коньке
-    wives = State()  # норожники
-    stairs = State()  # лестницы
-    humidity = State()  # влажность
-    walkways = State()  # ходовые мостки
-    leaks = State()  # протечки
-    state_of_mauerlat = State()  # состояние мауэрлата
-    outer_wall_thickness = State()  # толщина наружной стены
-    outdoor_temperature = State()  # температура наружного воздуха
-    attic_temperature = State()  # температура чердака
-    the_rotten_rafters = State()  # отметить гнилые стропила
-    roof_width = State()  # ширина кровли
-    roof_length = State()  # длина кровли
-    weather_vane = State()  # флюгарки
-    condition_of_the_top = State() # состояние верхней поверхности оцинковки
-    condition_of_brick = State()  # состояние кирпичных или других вентшахт
-    superstructures_on_the_roof = State()  # есть ли надстройки на кровле
-    communications_the_attic = State()  # какие коммуникации идут по чердаку
+
+    class Roofing(StatesGroup):
+        vertical_coverings = State()  # вертикальные покрытия
+        roofing_engineering_systems = State()  # Инженерные системы кровельные
+        transit_engineering_systems = State()  # Инженерные системы транзитные
+        roof_equipment = State()  # Оборудование и надстройки на кровле
+        fencing = State()  # Ограждение
+        parapet_coverings = State()  # парапетиные покрытия
+        ordinary_coverage = State()  # рядовое покрытие
+        snow_holders = State()  # снегозадержатели
+        wall_architectural = State()  # Стеновые архитектурные элементы
+        safety_pipes = State()  # Страховочные трубы
+        elimination_of_defects = State()  # сущ. или следы ликвидации дефектов, повреждений, недостатков.
+        leaks = State() # существующие или видимые следы протечек, конденсата
+        External_and_main_walls = State() # Наружные и капитальные стены
+
+    class Roof_access(StatesGroup):  # Доступ на кровлю
+        door = State()  # Дверь
+        stairs = State()  # Лестница
+        hatch = State()  # Люк
+
+    class UnderRoofing(StatesGroup):
+        firewalls = State()  # Брандмауэрные стены
+        ventilation = State()  # Вентиляция подкровельного пространства
+        internal_walls = State()  # Внутренние стены, перегородки, шахты, вентканалы.
+        access_to_attic = State()  # Доступ в чердачное пространство.
+        engineering_attic = State()  # Инженерные системы чердачные
+
+        class Transit_engineering(StatesGroup):  # Инженерные системы транзитные
+            hot_water_supply = State()  # горячее водоснабжение
+            internet = State()  # интернет, связь, телевидение
+            fanny_risers = State()  # фанрвые стояки
+            cold_water_supply = State()  # холодное водоснабжение
+            power_supply = State()  # электроснабжение
+
+        class Rafter_system(StatesGroup):  # Стропильная система
+            humidity = State()  # Влажность
+            ridge_height = State()  # Высота в коньке
+            mauerlat = State()  # гидроизоляция под мауэрлат
+            fire_bioprotection = State()  # огнеобиозащита
+            rotten_rafters = State()  # отметить гнилые стропила
+            size_mauerlat = State()  # размер и состояние мауэрлата
+            pitch_crate = State()  # размер и шаг обрешетки
+            rafter_scheme = State()  # схема стропил
+            walkways = State()  # ходовые мостки
+            rafter_pitch = State()  # шаг стропил
+
+        class Warming(StatesGroup):  # Утепление
+            attic_floor = State()  # чердачное перекрытие
+            mines = State()  # шахт, вентканалов, дымоходов и тд
 
 
 
-class MineInsulation(StatesGroup):  # утепление шахт
-    pass
 
 
-
-class FireFall(StatesGroup):  # брандмауэр
-    pass

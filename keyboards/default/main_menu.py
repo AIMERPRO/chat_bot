@@ -3,18 +3,18 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeybo
 main_menu_keyboard = ReplyKeyboardMarkup(
     [
         [
-            KeyboardButton(text="Фасад"),
-            KeyboardButton(text="Кровля"),
-            KeyboardButton(text="Окна")
+            KeyboardButton(text="Общие сведения"),
+            KeyboardButton(text="Несущие элементы"),
+            KeyboardButton(text="Состояние здания")
         ],
         [
-            KeyboardButton(text="Трубы"),
-            KeyboardButton(text="Электрика"),
-            KeyboardButton(text="Отопление"),
+            KeyboardButton(text="Благоустройство"),
+            KeyboardButton(text="Наружная отделка"),
         ],
         [
-            KeyboardButton(text="Отправить документ 💾 13%")
+            KeyboardButton(text="Отправить документ 💾")
         ]
     ],
     resize_keyboard=True
 )
+
