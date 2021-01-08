@@ -24,3 +24,5 @@ async def name_comp(message: types.Message, state: FSMContext):
 async def address(message: types.Message, state:FSMContext):
     await message.answer("Теперь можем продолжать", reply_markup=main_menu_keyboard)
     await state.update_data(address=message.text)
+
+    await MenuState.main_menu.set()
