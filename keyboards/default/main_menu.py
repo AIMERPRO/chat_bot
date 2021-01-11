@@ -5,7 +5,7 @@ main_menu_keyboard = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Общие сведения ❌"),
             KeyboardButton(text="Несущие элементы ❌"),
-            KeyboardButton(text="Состояние здания ❌")
+            KeyboardButton(text="Подвал ❌")
         ],
         [
             KeyboardButton(text="Благоустройство ❌"),
